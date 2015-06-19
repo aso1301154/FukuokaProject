@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+#site-box{
+	background-image:
+	margin-left: auto;
+	margin-right: auto;
+	
+	width:1200px;
+	
+		
+	background-color: #ffffff;
+}
+
+#top-box {
+		  width:100%;
+		  background-color: #ffffff;
+/*        border: 1px solid #000000;
+          background-color: #808080;
+          position: fixed;  //位置を固定
+		  top: 0;   //縦の位置を指定
+		  left: 0;   //横の位置をして
+  		  z-index: 999; //オブジェクトが重なった場合の表示順
+		  width: 100%; //横幅を全面に設定 */
+}
+
+#slider{
+	margin-left: auto;
+	margin-right: auto;
+	width:800px;
+
+}
+

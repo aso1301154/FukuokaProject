@@ -1,0 +1,459 @@
+@charset "shift_jis";
+
+body {
+	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	font-size: 75%;
+	line-height: 2;
+	color: #656058;
+	background-color: #D9D0C2;
+	background-image: url(images/bg.png);
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+img {
+	border: none;
+}
+
+input,textarea,select {
+	font-size: 1em;
+}
+
+form {
+	margin: 0px;
+}
+
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+
+
+/*リンクカラー設定
+---------------------------------------------------------------------------*/
+a {
+	color: #656058;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*page1（HOME）のカーソルオーバー時カラー*/
+#page1 a:hover {
+	color: #99d1d7;
+}
+
+/*page2（ABOUT）のカーソルオーバー時カラー*/
+#page2 a:hover {
+	color: #8aba9b;
+}
+
+/*page3（CAKE）のカーソルオーバー時カラー*/
+#page3 a:hover {
+	color: #849e70;
+}
+
+/*page4（Q&A）のカーソルオーバー時カラー*/
+#page4 a:hover {
+	color: #9e7c71;
+}
+
+/*page5（LINK）のカーソルオーバー時カラー*/
+#page5 a:hover {
+	color: #85709a;
+}
+
+/*page6（CONTACT）のカーソルオーバー時カラー*/
+#page6 a:hover {
+	color: #7387a1;
+}
+
+
+
+
+/*h1タグ設定
+---------------------------------------------------------------------------*/
+h1 {
+	font-size: 10px;	/*文字サイズ*/
+	color: #fafafa;		/*文字色*/
+	font-weight: normal;
+	text-align: right;	/*文字を右寄せ*/
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+}
+
+h1 a {
+	color: #fafafa;			/*リンクを設定した際の文字色*/
+	text-decoration: none;	/*下線を消す設定*/
+}
+
+
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	background-color: #FFFFFF;	/*背景色*/
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+
+
+
+/*ヘッダー（サイト名ロゴとメイン写真が入っているブロック）
+---------------------------------------------------------------------------*/
+#header {
+	background-image: url(images/header_bg.png);	/*ヘッダー背景画像*/
+	background-repeat: no-repeat;
+	height: 310px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+/*サイトロゴ配置設定*/
+#header #logo {
+	position: absolute;
+	left: 0px;	/*ヘッダーに対して左から0pxの位置に配置*/
+	top: 100px;	/*ヘッダーに対して上から100pxの位置に配置*/
+}
+
+
+
+/*メインメニュー
+---------------------------------------------------------------------------*/
+ul#menu {
+	height: 50px;
+	margin-left: 10px;
+	width: 830px;
+	margin-bottom: 20px;
+}
+
+ul#menu img {
+	vertical-align: bottom;
+}
+
+ul#menu li {
+	float: left;
+	margin-right: 10px;
+}
+
+ul#menu li.last {
+	margin-right: 0px;
+}
+
+
+/*メインメニューの下ボーダーカラー
+---------------------------------------------------------------------------*/
+/*page1（HOME）*/
+#page1 ul#menu {
+	border-bottom: 10px solid #d6ecef;
+}
+/*page2（ABOUT）*/
+#page2 ul#menu {
+	border-bottom: 10px solid #daf0e2;
+}
+/*page3（CAKE）*/
+#page3 ul#menu {
+	border-bottom: 10px solid #e1efd6;
+}
+/*page4（Q&A）*/
+#page4 ul#menu {
+	border-bottom: 10px solid #efdcd6;
+}
+/*page5（LINK）*/
+#page5 ul#menu {
+	border-bottom: 10px solid #e0d4eb;
+}
+/*page6（CONTACT）*/
+#page6 ul#menu {
+	border-bottom: 10px solid #d6e1ef;
+}
+
+
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+#contents {
+	width: 830px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*メインコンテンツ
+---------------------------------------------------------------------------*/
+/*h2見出しタグ共通設定*/
+#main h2 {
+	font-size: 100%;
+	line-height: 40px;
+	height: 40px;
+	overflow: hidden;
+	padding-left: 30px;
+	clear: both;
+}
+
+/*段落タグ設定*/
+#main p {
+	padding: 0.5em 10px 1em;
+}
+
+/*page1（HOME）のh2背景画像*/
+#page1 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_1.gif);
+	background-repeat: no-repeat;
+}
+
+/*page2（ABOUT）のh2背景画像*/
+#page2 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_2.gif);
+	background-repeat: no-repeat;
+}
+
+/*page3（CAKE）のh2背景画像*/
+#page3 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_3.gif);
+	background-repeat: no-repeat;
+}
+
+/*page4（Q&A）のh2背景画像*/
+#page4 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_4.gif);
+	background-repeat: no-repeat;
+}
+
+/*page5（LINK）のh2背景画像*/
+#page5 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_5.gif);
+	background-repeat: no-repeat;
+}
+
+/*page1（CONTACT）のh2背景画像*/
+#page6 #main h2 {
+	color: #fafafa;
+	background-image: url(images/midashi1_6.gif);
+	background-repeat: no-repeat;
+}
+
+
+
+/*フッターメニュー
+---------------------------------------------------------------------------*/
+ul#footermenu {
+	clear: both;
+	width: 100%;
+	font-size: 10px;	/*文字サイズ*/
+	text-align: center;	/*センタリング*/
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+ul#footermenu li {
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+
+/*フッター（コピーライト表記がある最下部部分）
+---------------------------------------------------------------------------*/
+#footer {
+	font-size: 10px;	/*文字サイズ*/
+	text-align: center;	/*センタリング*/
+	background-image: url(images/footer_bg.jpg);	/*フッター背景画像*/
+	background-repeat: no-repeat;
+	background-position: top;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+#main .new dl {
+	height: 150px;			/*ボックスの高さ*/
+	overflow: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#main .new dt {
+	font-weight: bold;	/*日付を太字にする設定*/
+	float: left;
+}
+
+#main .new dd {
+	border-bottom: 1px solid #cccccc;	/*日付ごとの下線*/
+	padding-left: 8em;
+}
+
+
+
+/*CAKEページボックス設定
+---------------------------------------------------------------------------*/
+.box1 {
+	height: 330px;
+	width: 230px;
+	border: 3px solid #CCCCCC;	/*ボックス1個あたりの枠線の幅と線種と色*/
+	float: left;
+	display: inline;
+	margin-top: 14px;
+	margin-left: 14px;
+	padding: 10px;
+	overflow: auto;
+}
+
+/*h3見出し設定*/
+.box1 h3 {
+	font-size: 14px;	/*文字サイズ*/
+	color: #849e70;		/*文字色*/
+}
+
+/*段落タグ設定*/
+.box1 p {
+	padding: 0px !important;
+	font-size: 11px;	/*文字サイズ*/
+	line-height: 1.6;
+}
+
+
+
+/*テーブル１（リンクページに使っているテーブル）
+---------------------------------------------------------------------------*/
+/*テーブル１共通設定*/
+.ta1 {
+	width: 830px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.ta1, .ta1 td, .ta1 th{
+	border: 1px solid #999999;	/*枠線の幅と線種と色*/
+}
+
+.ta1 td, .ta1 th{
+	padding: 10px 5px;
+}
+
+.ta1 th{
+	background-color: #f5f5f5;
+	width: 200px;
+	text-align: center;
+}
+
+.ta1 th.tamidashi{
+	width: auto;
+	text-align: left;
+}
+
+/*page1（HOME）の「サンプルタイトル」部分の背景色*/
+#page1 .ta1 th.tamidashi{
+	background-color: #D6ECEF;
+}
+
+/*page2（ABOUT）の「サンプルタイトル」部分の背景色*/
+#page2 .ta1 th.tamidashi{
+	background-color: #DAF0E2;
+}
+
+/*page3（CAKE）の「サンプルタイトル」部分の背景色*/
+#page3 .ta1 th.tamidashi{
+	background-color: #E1EFD6;
+}
+
+/*page4（Q&A）の「サンプルタイトル」部分の背景色*/
+#page4 .ta1 th.tamidashi{
+	background-color: #EFDCD6;
+}
+
+/*page5（LINK）の「サンプルタイトル」部分の背景色*/
+#page5 .ta1 th.tamidashi{
+	background-color: #E0D4EB;
+}
+
+/*page6（CONTACT）の「サンプルタイトル」部分の背景色*/
+#page6 .ta1 th.tamidashi{
+	background-color: #D6E1EF;
+}
+
+
+
+/*アクセントカラー
+---------------------------------------------------------------------------*/
+/*page1（HOME）のアクセント（class="color1"）カラー*/
+#page1 .color1 {
+	color: #83b3b8;
+}
+
+/*page2（ABOUT）のアクセント（class="color1"）カラー*/
+#page2 .color1 {
+	color: #8aba9b;
+}
+
+/*page3（CAKE）のアクセント（class="color1"）カラー*/
+#page3 .color1 {
+	color: #849e70;
+}
+
+/*page4（Q&A）のアクセント（class="color1"）カラー*/
+#page4 .color1 {
+	color: #9e7c71;
+}
+
+/*page5（LINK）のアクセント（class="color1"）カラー*/
+#page5 .color1 {
+	color: #85709a;
+}
+
+/*page6（CONTACT）のアクセント（class="color1"）カラー*/
+#page6 .color1 {
+	color: #7387a1;
+}
+
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {
+	background-color: #E4E4E4;
+}
+
+.mb1em {
+	margin-bottom: 1em;
+}
+
+.clear {
+	clear: both;
+}
+
+ul.disc {
+	padding: 0.5em 10px 0.5em 25px;
+	list-style: disc;
+}

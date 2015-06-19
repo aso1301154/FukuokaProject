@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/reset.css" rel="stylesheet" />
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+                auto: true,
+                pause: 4000,
+            });
+        });
+</script>
+</head>
+<body>
+<div id="site-box" style="margin-left: auto;margin-right: auto;">
+<div id="top-box">
+	<img src="img/logo.png" alt="ロゴ" width="150px">
+	<img src="img/title2.png" alt="タイトル" width="700px">
+	<div id="search-box" style="vertical-align: top;">
+			
+			<form>
+			（検索）
+			<input type="text" style="width:500px;height:30px;font-size:100%;vertical-align: middle;margin:0px;padding:0px;" name="searchName">
+			<img src="img/search.png" alt="検索ボタン" height="36px" style="vertical-align: middle; padding:0px; margin:0px;" >
+			<select name="example" style="box-sizing:content-box;width:120px;height:80px;font-size:100%;">
+			<option value="1">価格昇順</option>
+			<option value="2">価格降順</option>
+			<option value="3">人気順</option>
+			<option value="4">更新日順</option>
+			</select>
+			<a href="login.html"><font color="#1e90ff">ログイン</font></a>
+			<font color="#000000"> | </font>
+			<a href="entrymember.html"><font color="#1e90ff">会員登録</font></a>
+			<font color="#000000"> | </font>
+			<a href="acountsavice.html"><font color="#1e90ff">アカウントサービス</font></a>
+			</form>
+			<br>
+
+
+
+	</div>
+	
+</div>
+<div id="box">
+ジャンル<br><br>
+ジャンル<br><br>
+ジャンル<br><br>
+ジャンル<br><br>
+ジャンル<br><br>
+<div id="slider">
+<ul class="bxslider" style="align:center;">
+  <li><img src="img/ramtop.png" alt="商品画像" width="800px"></li>
+  <li><img src="img/ramtop2.jpg" alt="商品画像" width="800px"></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
