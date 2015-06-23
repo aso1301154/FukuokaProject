@@ -22,6 +22,6 @@
   }
 
   function img_tag($img_id) {
-    return '<img src="get_image.php?key=' . $img_id . '"alt="">';
+    return '<img src="get_image.php?key=' . $img_id . '"alt=""width="300" height="200">';
   }
 ?>

@@ -18,7 +18,7 @@
 
 
 	<h1>
-		<a href="index.html">h1テキスト入力場所です。titleタグの次に重要なので念入りに考えてワードを盛り込みましょう。</a>
+		<a href="l_form.php">ログイン</a>
 	</h1>
 
 
@@ -94,7 +94,44 @@
 					</dl>
 				</div>
 				<!--/new-->
-
+				☆TOP商品☆
+				<table>
+					<?php foreach ($goods as $g) { ?>
+					<tr>
+						<td><?php echo img_tag($g['goods_id'])?></td>
+						<td>
+							<p class="goods">
+								<?php echo $g['goods_name'] ?>
+							</p>
+							<p>
+								<?php echo nl2br($g['comment']) ?>
+							</p>
+						</td>
+						<td>
+							<p>
+								<?php echo $g['detail']?>
+							</p>
+						</td>
+						<td width="80">
+							<p>
+								<?php echo $g['fee'] ?>
+								円
+							</p>
+							<form action="cart.php" method="post">
+								<select name="num">
+									<?php
+			for($i = 0; $i <= 9; $i ++) {
+				echo "<option>$i</option>";
+			}
+			?>
+								</select> <input type="hidden" name="goods_id"
+									value="<?php echo $g['goods_id'] ?>"> <input
+									type="submit" name="submit" value="カートへ">
+							</form>
+						</td>
+					</tr>
+					<?php } ?>
+				</table>
 
 
 
