@@ -66,7 +66,11 @@
 
 			<div id="main">
 
-
+				<h2>商品検索</h2>
+				<form action="search.php" method="post">
+				<input type="text" name="name" size="40" />
+				<input type="submit" name='submit' value="検索" />
+				</form>
 				<h2>更新情報・お知らせ</h2>
 
 				<div class="new">
