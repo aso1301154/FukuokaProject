@@ -18,7 +18,7 @@
 
 
 	<h1>
-		<a href="l_form.php">ログイン</a>ようこそ
+		ようこそ
 		<?php print($_SESSION['member_name']);?>
 		さん！
 		<a href="logout.php">ログアウト</a>
