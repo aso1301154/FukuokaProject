@@ -21,7 +21,7 @@
 
 	<h1>
 		<div class="empty">
-			<a href="entry.php">新規登録</a>
+			<a href="t_entry.php">新規登録</a>
 		</div>
 		<div class="login">
 		<a href="l_form.php">ログイン</a>

@@ -1,4 +1,6 @@
-<?php session_start()?>
+<?php 
+require 'entry.php';
+?>
 
 <html>
 <head>
@@ -45,12 +47,13 @@
 
 		<p>
 			画像認証
-			 <input type="text" name="captcha_code"value=''> <br>
+			 <input type="text" name="captcha_code"value="" <?php echo h($error);?>> <br>
 				<img id="captcha" src="./securimage/securimage_show.php" alt="CAPTCHA Image" /> 
 				<a href="#" onclick="document.getElementById('captcha').src = './securimage/securimage_show.php?' + Math.random(); return false">画像変更</a>
+				<br><p><?php echo h($mes);?></p>
 		</p>
 		<p>
-			<input type="submit" name="submit" value="購入">
+			<input type="submit" name="submit" value="登録">
 		</p>
 
 	</form>
