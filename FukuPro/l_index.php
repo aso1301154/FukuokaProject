@@ -36,23 +36,23 @@
 
 
 		<ul id="menu">
-			<li><a href="index.html"><img src="images/menu_01.gif" alt="HOME"
+			<li><a href="index.html"><img src="images/sample.png" alt="HOME"
 					width="130" height="50" id="Image1"
 					onmouseover="MM_swapImage('Image1','','images/menu_over_01.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="about.html"><img src="images/menu_02.gif" alt="ABOUT"
+			<li><a href="about.html"><img src="images/sample.png" alt="ABOUT"
 					width="130" height="50" id="Image2"
 					onmouseover="MM_swapImage('Image2','','images/menu_over_02.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="cake.html"><img src="images/menu_03.gif" alt="CAKE"
+			<li><a href="cake.html"><img src="images/sample.png" alt="CAKE"
 					name="Image3" width="130" height="50" id="Image3"
 					onmouseover="MM_swapImage('Image3','','images/menu_over_03.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="qa.html"><img src="images/menu_04.gif" alt="Q&amp;A"
+			<li><a href="qa.html"><img src="images/sample.png" alt="Q&amp;A"
 					name="Image4" width="130" height="50" id="Image4"
 					onmouseover="MM_swapImage('Image4','','images/menu_over_04.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="link.html"><img src="images/menu_05.gif" alt="LINK"
+			<li><a href="link.html"><img src="images/sample.png" alt="LINK"
 					width="130" height="50" id="Image5"
 					onmouseover="MM_swapImage('Image5','','images/menu_over_05.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>

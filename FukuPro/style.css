@@ -152,7 +152,7 @@ ul#menu li.last {
 ---------------------------------------------------------------------------*/
 /*page1（HOME）*/
 #page1 ul#menu {
-	border-bottom: 10px solid #d6ecef;
+	border-top: 10px solid #da9900;
 }
 /*page2（ABOUT）*/
 #page2 ul#menu {
