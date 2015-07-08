@@ -111,38 +111,6 @@
 						<td>
 					<?php echo img_sub($g['goods_id'])?>
 						</td>
-
-
-						<td><?php echo img_tag($g['goods_id'])?></td>
-						<td>
-							<p class="goods">
-								<?php echo $g['goods_name']?>
-							</p>
-
-						</td>
-						<td>
-							<p>
-								<?php echo $g['detail']?>
-							</p>
-						</td>
-						<td width="80">
-							<p>
-								<?php echo $g['fee']?>
-								円
-							</p>
-							<form action="cart.php" method="post">
-								<select name="num">
-									<?php
-						for($i = 0; $i <= 9; $i ++) {
-							echo "<option>$i</option>";
-						}
-						?>
-								</select> <input type="hidden" name="goods_id"
-									value="<?php echo $g['goods_id'] ?>"> <input type="submit"
-									name="submit" value="カートへ">
-							
-							</form>
-						</td>
 					</tr>
 					<?php } ?>
 				</table>

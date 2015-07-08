@@ -24,6 +24,6 @@ function img_tag($img_id) {
 function img_sub($img_id) {
 	return '<form method="post" action="detail.php">
    			<input type="hidden" name="goods_id" value="' . $img_id . '">
-   			<input type="submit" name="submit" value="" style="background:url("get_image.php?key=' . $img_id . '");width:300px; height:200px;border:0px solid;cursor:pointer;" />';
+   			<input type="image" src="get_image.php?key=' . $img_id . '"alt="送信"width="300" height="200">';
 }
 ?>
