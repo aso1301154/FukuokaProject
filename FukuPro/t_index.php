@@ -24,7 +24,7 @@
 			<a href="t_entry.php">新規登録</a>
 		</div>
 		<div class="login">
-		<a href="l_form.php">ログイン</a>
+			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>
 
@@ -108,14 +108,17 @@
 				<table>
 					<?php foreach ($goods as $g) { ?>
 					<tr>
+						<td>
+					<?php echo img_sub($g['goods_id'])?>
+						</td>
+
+
 						<td><?php echo img_tag($g['goods_id'])?></td>
 						<td>
 							<p class="goods">
 								<?php echo $g['goods_name']?>
 							</p>
-							<p>
-								<?php echo nl2br($g['comment'])?>
-							</p>
+
 						</td>
 						<td>
 							<p>

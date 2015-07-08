@@ -104,6 +104,7 @@
 				<table>
 					<?php foreach ($goods as $g) { ?>
 					<tr>
+					<td><?php echo img_sub($g['goods_id'])?></td>
 						<td><?php echo img_tag($g['goods_id'])?></td>
 						<td>
 							<p class="goods">
