@@ -109,7 +109,9 @@
 					<?php foreach ($goods as $g) { ?>
 					<tr>
 						<td>
-					<?php echo img_sub($g['goods_id'])?>
+					<?php 
+					array($g['goods_id']);
+					echo img_sub($g['goods_id'])?>
 						</td>
 					</tr>
 					<?php } ?>
