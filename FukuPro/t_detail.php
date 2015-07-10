@@ -90,7 +90,7 @@
 								<?php echo $g['fee']?>
 								円
 							</p>
-							<?php }?>
+							
 					<form action="cart.php" method="post">
 						<select name="num">
 									<?php
@@ -99,11 +99,11 @@
 									}
 									?>
 								</select> <input type="hidden" name="goods_id"
-							value="<?php echo $goods['goods_id'] ?>"> <input type="submit"
+							value="<?php echo $g['goods_id'] ?>"> <input type="submit"
 							name="submit" value="カートへ">
 					
 					</form>
-			
+			<?php }?>
 			</div>
 			<!--/main-->
 		</div>
