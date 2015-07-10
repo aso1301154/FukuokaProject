@@ -106,15 +106,19 @@
 				<!--/new-->
 				☆TOP商品☆
 				<table>
-					<?php foreach ($goods as $g) { ?>
-					<tr>
+					<?php
+					foreach ( $goods as $g ) {
+						?>
+						<tr>
 						<td>
-					<?php 
-					array($g['goods_id']);
-					echo img_sub($g['goods_id'])?>
+					<?php
+						echo img_sub ( $g ['goods_id'] );
+						?>
 						</td>
 					</tr>
-					<?php } ?>
+					<?php
+					}
+					?>
 				</table>
 
 
