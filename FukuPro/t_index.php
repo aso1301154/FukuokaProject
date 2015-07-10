@@ -104,17 +104,16 @@
 					</dl>
 				</div>
 				<!--/new-->
-				☆TOP商品☆
+				<h2>☆TOP商品☆</h2>
+				<br />
 				<table>
 					<?php
 					foreach ( $goods as $g ) {
 						?>
 						<tr>
-						<td>
 					<?php
 						echo img_sub ( $g ['goods_id'] );
 						?>
-						</td>
 					</tr>
 					<?php
 					}
