@@ -1,54 +1,58 @@
 <?php
 require 'common.php';
-$action = 'entry.php';
+$flg = true;
 if (isset ( $_POST ['captcha_code'] )) {
 	session_start ();
 	if ($_POST ['name'] == '') {
 		$error ['name'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['furigana'] == '') {
 		$error ['furigana'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['year'] == '') {
 		$error ['year'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['month'] == '') {
 		$error ['month'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['day'] == '') {
 		$error ['day'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['sex'] == '') {
 		$error ['sex'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['address'] == '') {
 		$error ['address'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['tel'] == '') {
 		$error ['tel'] = 'blank';
-		$action = '';
+		$flg = false;
 	}
 	if ($_POST ['mail'] == '') {
 		$error ['mail'] = 'blank';
-		$action = '';
+		$flg = false;
+	}
+	
+	if ($flg==true) {
+//		セッションに入れて投げるの書く;
 	}
 	
 	// 画像の処理
 	if ($_POST ['captcha_code'] == '') {
 		$error = ' class=error ';
 		$mes = '画像認証を入力してください。';
-		$action = '';
+		$flg = false;
 	} elseif ($_POST ['captcha_code'] != $_SESSION ["securimage_code_disp"] ["default"]) {
 		$error = ' class=error ';
 		$mes = '入力された画像認証をご確認ください。';
-		$action = '';
+		$flg = false;
 	} else {
 		$mes = '画像認証は正しく入力されました。';
 	}
@@ -68,7 +72,7 @@ function h($str) {
 <body>
 	<h1>会員登録</h1>
 	<?php //if ($error)echo "<span class=\"error\">$error</span>"?>
-	<?php echo '<form action="'.$action.'" method="post">'?>
+	<<form action="'.$action.'" method="post">
 		<p>
 		お名前<br> <input type="text" name="name" value="<?php echo $name ?>">
 	<?php if($error['name'] == 'blank'): ?>
