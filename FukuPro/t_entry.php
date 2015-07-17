@@ -1,8 +1,8 @@
 <?php
 require 'common.php';
 $flg = true;
-if (isset ( $_POST ['captcha_code'] )) {
-	session_start ();
+if (isset ( $_POST ['submit'] )) {
+	;
 	if ($_POST ['name'] == '') {
 		$error ['name'] = 'blank';
 		$flg = false;
@@ -82,22 +82,10 @@ if (isset ( $_POST ['captcha_code'] )) {
 <body>
 	<h1>会員登録</h1>
 	<?php //if ($error)echo "<span class=\"error\">$error</span>"?>
-	<form action="'.$action.'" method="post">
+	<form action="t_entry.php" method="post">
 		<p>
 			お名前<br> <input type="text" name="name" value="<?php echo $name ?>">
-	<?php if($error['name'] == 'blank'): ?>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	<?php if($error['name'] == 'blank'): ?>	
 		<p class="error">※必須 名前を入力して下さい。</p>
 	<?php endif; ?>
 				
@@ -105,38 +93,14 @@ if (isset ( $_POST ['captcha_code'] )) {
 		<p>
 			フリガナ<br> <input type="text" name="furigana"
 				value="<?php echo $furigana ?>">
-			<?php if($error['furigana'] == 'blank'): ?>
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			<?php if($error['furigana'] == 'blank'): ?>	
 		<p class="error">※必須 フリガナを入力して下さい。</p>
 	<?php endif; ?>
 	</p>
 		<p>
 			生年月日<br> 西暦<input type="number" name="year" min="1900" max="2016"
 				value="<?php echo $year ?>"> 年 
-				<?php if($error['year'] == 'blank'): ?>
-  
-		
-		
-		
-		
-		
-		
-		
-		
+				<?php if($error['year'] == 'blank'): ?>		
 		<p class="error">※必須 誕生年を入力して下さい。</p>
 <?php endif; ?>
 				<input type="number" name="month" min="1" max="12"
@@ -155,16 +119,7 @@ if (isset ( $_POST ['captcha_code'] )) {
 			性別<br> <input type="radio" name="sex" value="1">男性 <input
 				type="radio" name="sex" value="2">女性 <input type="radio" name="sex"
 				value="9" checked="checked">きみや
-				<?php if($error['sex'] == 'blank'): ?>
-  
-		
-		
-		
-		
-		
-		
-		
-		
+				<?php if($error['sex'] == 'blank'): ?>		
 		<p class="error">※必須 性別を入力してください</p>
 <?php endif; ?>
 		</p>
@@ -172,61 +127,23 @@ if (isset ( $_POST ['captcha_code'] )) {
 			ご住所<br> <input type="text" name="address" size="60"
 				value="<?php echo $address ?>">
 				<?php if($error['address'] == 'blank'): ?>
-  
-		
-		
-		
-		
-		
-		
-		
-		
 		<p class="error">※必須 住所を入力して下さい。</p>
 <?php endif; ?>
 		</p>
 		<p>
 			電話番号<br> <input type="text" name="tel" value="<?php echo $tel ?>">
-			<?php if($error['tel'] == 'blank'): ?>
-  
-		
-		
-		
-		
-		
-		
-		
-		
+			<?php if($error['tel'] == 'blank'): ?>		
 		<p class="error">※必須 電話番号を入力して下さい。</p>
 <?php endif; ?>
 		</p>
 		<p>
 			メールアドレス<br> <input type="text" name="mail"
 				value="<?php echo $mail ?>">
-				<?php if($error['mail'] == 'blank'): ?>
-  
-		
-		
-		
-		
-		
-		
-		
-		
+				<?php if($error['mail'] == 'blank'): ?>	
 		<p class="error">※必須 メールアドレスを入力してください。</p>
 <?php endif; ?>
 		</p>
 
-		<p>
-			画像認証 <input type="text" name="captcha_code" value=""
-				<?php echo h($error);?>> <br> <img id="captcha"
-				src="./securimage/securimage_show.php" alt="CAPTCHA Image" /> <a
-				href="#"
-				onclick="document.getElementById('captcha').src = './securimage/securimage_show.php?' + Math.random(); return false">画像変更</a>
-			<br>
-		
-		
-		<p><?php echo h($mes);?></p>
-		</p>
 		<p>
 			<input type="submit" name="submit" value="登録">
 		</p>
