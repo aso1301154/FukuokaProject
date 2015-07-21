@@ -1,3 +1,53 @@
 <?php
-echo $_POST['name'];
+require 'common.php';
+
+if(!isset($_SESSION['join'])){
+  header('Location: index.php');
+  exit();
+}
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>新規会員登録</title>
+</head>
+<body>
+  <form action="" method="post">
+  <dl>
+    <dt>名前</dt>
+    <dd>
+    <?php echo htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES, 'UTF-8'); ?>
+  </dd>
+    </dd>
+    <dt>フリガナ</dt>
+    <dd>
+    <?php echo htmlspecialchars($_SESSION['join']['furigana'], ENT_QUOTES, 'UTF-8'); ?>
+  </dd>
+    </dd>
+    <dt>メールアドレス</dt>
+    <dd>
+    <?php echo htmlspecialchars($_SESSION['join']['mail'], ENT_QUOTES, 'UTF-8'); ?>
+  </dd>
+    </dd>
+    <dt>住所</dt>
+    <dd>
+    <?php echo htmlspecialchars($_SESSION['join']['address'], ENT_QUOTES, 'UTF-8'); ?>
+  </dd>
+    </dd>
+    <dt>電話番号</dt>
+    <dd>
+    <?php echo htmlspecialchars($_SESSION['join']['tel'], ENT_QUOTES, 'UTF-8'); ?>
+  </dd>
+    </dd>
+    <dt>パスワード</dt>
+    <dd>
+      【表示されません】
+    </dd>
+  </dl>
+  <div><a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>
+  <input type="submit" value="登録する"></div>
+  </form>
+</body>
+</html>
