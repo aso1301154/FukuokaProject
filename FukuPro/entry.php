@@ -1,9 +1,25 @@
 <?php
 require 'common.php';
-
+$db = connect2();
+mysqli_set_charset($db, 'utf8');
 if(!isset($_SESSION['join'])){
-  header('Location: index.php');
+  header('Location:index.php');
   exit();
+}
+if (!empty($_POST)) {
+	//登録処理
+	$sql=sprintf('INSERT INTO member SET member_name=%s,furigana=%s,mail=%s,address=%s,tel=%s,password=%s',
+			mysql_real_escape_string($db,$_SESSION['join']['name']),
+			mysql_real_escape_string($db,$_SESSION['join']['furigana']),
+			mysql_real_escape_string($db,$_SESSION['join']['mail']),
+			mysql_real_escape_string($db,$_SESSION['join']['address']),
+			mysql_real_escape_string($db,$_SESSION['join']['tel']),
+			mysql_real_escape_string($db,$_SESSION['join']['password'])
+			);
+	mysqli_query($db, $sql) or die(mysqli_error($db));
+	unset($_SESSION['join']);
+	header( 'Location:thanks.php' );
+	exit();
 }
 ?>
 
@@ -43,10 +59,10 @@ if(!isset($_SESSION['join'])){
     </dd>
     <dt>パスワード</dt>
     <dd>
-      【表示されません】
+      <?php echo htmlspecialchars($_SESSION['join']['password'],ENT_QUOTES,'UTF-8'); ?>
     </dd>
   </dl>
-  <div><a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>
+  <div><a href="t_entry.php?action=rewrite">&laquo;&nbsp;書き直す</a>
   <input type="submit" value="登録する"></div>
   </form>
 </body>
