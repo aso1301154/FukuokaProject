@@ -18,16 +18,24 @@
 
 <body id="page1"
 	onload="MM_preloadImages('images/menu_over_01.gif','images/menu_over_05.gif','images/menu_over_06.gif','images/menu_over_02.gif','images/menu_over_03.gif','images/menu_over_04.gif')">
-
-	<h1>
+<?php
+if ($_SESSION ['member_name'] == null) {
+	echo '<h1>
 		<div class="empty">
 			<a href="t_entry.php">新規登録</a>
 		</div>
 		<div class="login">
 			<a href="l_form.php">ログイン</a>
 		</div>
-	</h1>
-
+	</h1>';
+}else{
+echo '<h1>
+		ようこそ';
+		 print($_SESSION['member_name']);
+		echo 'さん！
+		<a href="logout.php">ログアウト</a>
+	</h1>';
+}?>
 
 	<div id="container">
 

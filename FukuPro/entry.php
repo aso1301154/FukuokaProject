@@ -65,7 +65,7 @@ exit ();
 
 
 		<div id="header">
-			<a href="index.html"><img src="images/logo.gif" alt="" name="logo"
+			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
 				width="337" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
@@ -144,7 +144,7 @@ exit ();
 			</div>
 			<!--/main-->
 			<ul id="footermenu">
-				<li><a href="index.html">トップページ</a></li>
+				<li><a href="index.php">トップページ</a></li>
 			</ul>
 			<!--/footermenu-->
 
