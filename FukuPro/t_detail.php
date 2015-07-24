@@ -48,31 +48,32 @@ echo '<h1>
 
 
 		<ul id="menu">
-			<li><a href="index.php"><img src="images/syokuhin.png" alt="HOME"
+			<li><a href="search.php"><img src="images/syokuhin.png" alt="HOME"
 					width="130" height="50" id="Image1"
 					onmouseover="MM_swapImage('Image1','','images/menu_over_01.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="about.php"><img src="images/nosakumotu.png" alt="ABOUT"
+			<li><a href="search.php"><img src="images/nosakumotu.png" alt="ABOUT"
 					width="130" height="50" id="Image2"
 					onmouseover="MM_swapImage('Image2','','images/menu_over_02.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="cake.php"><img src="images/inryo.png" alt="CAKE"
+			<li><a href="search.php"><img src="images/inryo.png" alt="CAKE"
 					name="Image3" width="130" height="50" id="Image3"
 					onmouseover="MM_swapImage('Image3','','images/menu_over_03.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="qa.php"><img src="images/okasi.png" alt="Q&amp;A"
+			<li><a href="search.php"><img src="images/okasi.png" alt="Q&amp;A"
 					name="Image4" width="130" height="50" id="Image4"
 					onmouseover="MM_swapImage('Image4','','images/menu_over_04.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="link.php"><img src="images/kogehin.png" alt="LINK"
+			<li><a href="search.php"><img src="images/kogehin.png" alt="LINK"
 					width="130" height="50" id="Image5"
 					onmouseover="MM_swapImage('Image5','','images/menu_over_05.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li class="last"><a href="contact.php"><img src="images/sonota.png"
+			<li class="last"><a href="search.php"><img src="images/sonota.png"
 					alt="CONTACT" width="130" height="50" id="Image6"
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
+		
 
 
 		<div id="contents">
@@ -82,20 +83,12 @@ echo '<h1>
 				<h2>商品詳細</h2>
 				<?php foreach ($goods as $g){?>
 				<td><?php echo img_tag($g['goods_id'])?></td>
-				<td>
-					<p class="goods">
+					<td><p class="goods">
 								<?php echo $g['goods_name']?>
 							</p>
 					<p>
-								<?php echo nl2br($g['comment'])?>
-							</p>
-				</td>
-				<td>
-					<p>
 								<?php echo $g['detail']?>
 							</p>
-				</td>
-				<td width="80">
 					<p>
 								<?php echo $g['fee']?>
 								円
@@ -109,10 +102,10 @@ echo '<h1>
 									}
 									?>
 								</select> <input type="hidden" name="goods_id"
-							value="<?php echo $g['goods_id'] ?>"> <input type="submit"
-							name="submit" value="カートへ">
-					
+							value="<?php echo $g['goods_id'] ?>" /> <input type="submit"
+							name="submit" value="カートへ" />
 					</form>
+					</td>
 			<?php }?>
 
 

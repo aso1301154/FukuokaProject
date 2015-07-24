@@ -73,28 +73,22 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
 
 
 		<div id="contents">
 
 
 			<div id="main">
-			<h2>ログインします</h2>
-<form action="login.php" method="post">
-<dl>
-<dt>
-メールアドレス
-</dt>
-<dd>
-<input type="text" name="mail"></input></dd>
-<dt>
-パスワード</dt>
-<dd>
-<input type="password" name="password"></input></dd>
-<input type="submit" value="ログイン">
-</form>
-</div>
+
+
+<?php
+echo '工事中です';
+?>
+
+
+
+
+			</div>
 			<!--/main-->
 			<ul id="footermenu">
 				<li><a href="index.php">トップページ</a></li>

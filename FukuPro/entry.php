@@ -83,31 +83,32 @@ echo '<h1>
 
 
 		<ul id="menu">
-			<li><a href="index.php"><img src="images/syokuhin.png" alt="HOME"
+			<li><a href="search.php"><img src="images/syokuhin.png" alt="HOME"
 					width="130" height="50" id="Image1"
 					onmouseover="MM_swapImage('Image1','','images/menu_over_01.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="about.php"><img src="images/nosakumotu.png" alt="ABOUT"
+			<li><a href="search.php"><img src="images/nosakumotu.png" alt="ABOUT"
 					width="130" height="50" id="Image2"
 					onmouseover="MM_swapImage('Image2','','images/menu_over_02.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="cake.php"><img src="images/inryo.png" alt="CAKE"
+			<li><a href="search.php"><img src="images/inryo.png" alt="CAKE"
 					name="Image3" width="130" height="50" id="Image3"
 					onmouseover="MM_swapImage('Image3','','images/menu_over_03.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="qa.php"><img src="images/okasi.png" alt="Q&amp;A"
+			<li><a href="search.php"><img src="images/okasi.png" alt="Q&amp;A"
 					name="Image4" width="130" height="50" id="Image4"
 					onmouseover="MM_swapImage('Image4','','images/menu_over_04.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li><a href="link.php"><img src="images/kogehin.png" alt="LINK"
+			<li><a href="search.php"><img src="images/kogehin.png" alt="LINK"
 					width="130" height="50" id="Image5"
 					onmouseover="MM_swapImage('Image5','','images/menu_over_05.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
-			<li class="last"><a href="contact.php"><img src="images/sonota.png"
+			<li class="last"><a href="search.php"><img src="images/sonota.png"
 					alt="CONTACT" width="130" height="50" id="Image6"
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
+		
 
 
 		<div id="contents">
