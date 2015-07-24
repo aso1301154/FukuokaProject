@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="copyright" content="Nikukyu-Punch" />
-<title>福岡の特産品ばたべてみんしゃい！</title>
+<title>検索｜｜福岡の特産品ばたべてみんしゃい！</title>
 <meta name="description" content="ここにサイト説明を入れます" />
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５" />
 <link href="style.css" rel="stylesheet" type="text/css" />

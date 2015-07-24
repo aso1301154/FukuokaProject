@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="copyright" content="Nikukyu-Punch" />
-<title>福岡の特産品ばたべてみんしゃい！</title>
+<title>ログアウト｜｜福岡の特産品ばたべてみんしゃい！</title>
 <meta name="description" content="ここにサイト説明を入れます" />
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５" />
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -85,26 +85,26 @@ echo '<h1>
 			<div id="main">
 
 <?php
-    print('セッション変数の一覧を表示します。<br>');
-    print_r($_SESSION);
-    print('<br>');
+//     print('セッション変数の一覧を表示します。<br>');
+//     print_r($_SESSION);
+//     print('<br>');
 
-    print('セッションIDを表示します。<br>');
-    print($_COOKIE["PHPSESSID"].'<br>');
+//     print('セッションIDを表示します。<br>');
+//     print($_COOKIE["PHPSESSID"].'<br>');
 
-    print('<p>ログアウトします</p>');
+//     print('<p>ログアウトします</p>');
 
     $_SESSION = array();
 
-    if (isset($_COOKIE["PHPSESSID"])) {
-        setcookie("PHPSESSID", '', time() - 1800, '/');
-    }
+//     if (isset($_COOKIE["PHPSESSID"])) {
+//         setcookie("PHPSESSID", '', time() - 1800, '/');
+//     }
 
     session_destroy();
 ?>
-
+<p>ログアウトしました。</p>
 <p>
-<a href="index.php">トップへ</a>
+<a href="index.php">トップページへ</a>
 </p>
 			</div>
 			<!--/main-->
