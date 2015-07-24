@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta name="copyright" content="Nikukyu-Punch" />
-<title>ケーキ・カフェ向きホームページテンプレート simple19</title>
+<title>福岡の特産品ばたべてみんしゃい！</title>
 <meta name="description" content="ここにサイト説明を入れます" />
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５" />
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -104,7 +104,7 @@
 					</dl>
 				</div>
 				<!--/new-->
-				<h2>☆TOP商品☆</h2>
+				<h2>TOP商品</h2>
 				<br />
 				<table>
 					<?php
@@ -124,15 +124,8 @@
 
 			</div>
 			<!--/main-->
-
-
 			<ul id="footermenu">
 				<li><a href="index.html">トップページ</a></li>
-				<li><a href="about.html">当サイトについて</a></li>
-				<li><a href="cake.html">ケーキ</a></li>
-				<li><a href="qa.html">よくある質問</a></li>
-				<li><a href="link.html">リンク</a></li>
-				<li><a href="contact.html">お問い合わせ</a></li>
 			</ul>
 			<!--/footermenu-->
 
@@ -146,9 +139,7 @@
 
 
 	<div id="footer">
-		Copyright&copy; 2011 サンプルカフェ All Rights Reserved.<br /> <a
-			href="http://nikukyu-punch.com/" target="_blank">Template design by
-			Nikukyu-Punch</a>
+		Copyright&copy; 2015 福岡の特産品ば食べてみんしゃい！ All Rights Reserved.<br />
 	</div>
 	<!--/footer-->
 
