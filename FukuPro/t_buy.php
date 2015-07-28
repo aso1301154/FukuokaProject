@@ -42,8 +42,8 @@ if ($_SESSION ['member_name'] == null) {
 
 
 		<div id="header">
-			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
-				width="337" height="99" id="logo" /></a>
+			<a href="index.php"><img src="img/title2.png" alt="" name="logo"
+				width="550" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
 
@@ -87,17 +87,17 @@ if ($_SESSION ['member_name'] == null) {
   <form action="buy.php" method="post">
 						<p>
 							お名前<br> <input type="text" name="name"
-								value="<?php echo $_SESSION['member_name'] ?>" />
+								value="<?php echo $name ?>" />
 						
 						</p>
 						<p>
 							ご住所<br> <input type="text" name="address" size="60"
-								value="<?php echo $_SESSION['address'] ?>" />
+								value="<?php echo $address ?>" />
 						
 						</p>
 						<p>
 							電話番号<br> <input type="text" name="tel"
-								value="<?php echo $_SESSION['tel'] ?>" />
+								value="<?php echo $tel ?>" />
 						
 						</p>
 						<p>

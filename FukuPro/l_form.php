@@ -5,7 +5,7 @@ if (! empty ( $_POST )) {
 	$mail = $_POST ["mail"];
 	$pass = $_POST ["password"];
 	$login = connect2 ();
-	$sql = "SELECT member_id,password,member_name FROM member WHERE mail='$mail'";
+	$sql = "SELECT member_id,password,member_name,address,tel FROM member WHERE mail='$mail'";
 	$result = mysql_query ( $sql );
 	if (! $result) {
 		// print ("SQLの実行に失敗しました<BR>") ;
@@ -16,6 +16,8 @@ if (! empty ( $_POST )) {
 	if ($pass == $row ['password']) {
 		$_SESSION ['member_id'] = $row ['member_id'];
 		$_SESSION ['member_name'] = $row ['member_name'];
+		$_SESSION ['address'] = $row ['address'];
+		$_SESSION ['tel'] = $row ['tel'];
 		header ( 'location: index.php' );
 		exit ();
 	} else {
@@ -68,8 +70,8 @@ if ($_SESSION ['member_name'] == null) {
 
 
 		<div id="header">
-			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
-				width="337" height="99" id="logo" /></a>
+			<a href="index.php"><img src="img/title2.png" alt="" name="logo"
+				width="550" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
 

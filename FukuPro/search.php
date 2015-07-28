@@ -1,3 +1,6 @@
+<?php 
+require 'common.php';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
@@ -42,8 +45,8 @@ if ($_SESSION ['member_name'] == null) {
 
 
 		<div id="header">
-			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
-				width="337" height="99" id="logo" /></a>
+			<a href="index.php"><img src="img/title2.png" alt="" name="logo"
+				width="550" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
 
@@ -80,7 +83,7 @@ if ($_SESSION ['member_name'] == null) {
 
 
 			<div id="main">
-
+<h2>検索結果</h2>
 
 <?php
 echo '工事中です';

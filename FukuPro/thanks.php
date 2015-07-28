@@ -42,8 +42,8 @@ if ($_SESSION ['member_name'] == null) {
 
 
 		<div id="header">
-			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
-				width="337" height="99" id="logo" /></a>
+			<a href="index.php"><img src="img/title2.png" alt="" name="logo"
+				width="550" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
 
@@ -81,6 +81,7 @@ if ($_SESSION ['member_name'] == null) {
 
 
 			<div id="main">
+			<h2>登録完了</h2>
 				<p>ユーザー登録が完了しました</p>
 				<p>
 					<a href="l_form.php">ログインする</a>

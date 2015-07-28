@@ -45,8 +45,8 @@ if ($_SESSION ['member_name'] == null) {
 
 
 		<div id="header">
-			<a href="index.php"><img src="images/logo.gif" alt="" name="logo"
-				width="337" height="99" id="logo" /></a>
+			<a href="index.php"><img src="img/title2.png" alt="" name="logo"
+				width="550" height="99" id="logo" /></a>
 		</div>
 		<!--/header-->
 
@@ -84,23 +84,9 @@ if ($_SESSION ['member_name'] == null) {
 
 
 			<div id="main">
-
+<h2>ログアウト</h2>
 <?php
-// print('セッション変数の一覧を表示します。<br>');
-// print_r($_SESSION);
-// print('<br>');
-
-// print('セッションIDを表示します。<br>');
-// print($_COOKIE["PHPSESSID"].'<br>');
-
-// print('<p>ログアウトします</p>');
-
 $_SESSION = array ();
-
-// if (isset($_COOKIE["PHPSESSID"])) {
-// setcookie("PHPSESSID", '', time() - 1800, '/');
-// }
-
 session_destroy ();
 ?>
 <p>ログアウトしました。</p>
