@@ -1,8 +1,8 @@
 <?php
-if ($_GET["key"] != "") {
-	$img_id = $_GET['key']; // 取ってきたい商品のID
-	  //$img_id = 1;                     
-	// 接続
+if ($_GET ["key"] != "") {
+	$img_id = $_GET ['key']; // 取ってきたい商品のID
+	                        // $img_id = 1;
+	                        // 接続
 	$con = mysql_connect ( "localhost", "root", "root" );
 	if (! $con) {
 		print ("MySQLへの接続に失敗しました") ;
@@ -27,8 +27,8 @@ if ($_GET["key"] != "") {
 	mb_http_output ( "pass" );
 	
 	// ヘッダー情報によりこれが画像ファイルであることをわからせている
-	header ( "Content-type: image/jpeg");
+	header ( "Content-type: image/jpeg" );
 	header ( "Content-Disposition: inline; filename=image.jpg" );
-	echo $row[0];
+	echo $row [0];
 }
 ?>

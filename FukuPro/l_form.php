@@ -1,27 +1,27 @@
 <?php
 require 'common.php';
-$flg=false;
-if (!empty($_POST)) {
-$mail = $_POST ["mail"];
-$pass = $_POST ["password"];
-$login = connect2();
-$sql = "SELECT member_id,password,member_name FROM member WHERE mail='$mail'";
-$result = mysql_query ( $sql );
-if (! $result) {
-	//print ("SQLの実行に失敗しました<BR>") ;
-	//print (mysql_errno () . ": " . mysql_error () . "<BR>") ;
-	//exit ();
-}
-$row = mysql_fetch_array ( $result );
-if ($pass == $row['password']) {
-	$_SESSION['member_id'] = $row['member_id'];
-	$_SESSION['member_name'] = $row['member_name'];
-	header('location: index.php');
-	exit;
-}else {
-	$flg=true;
-	//print ('IDかパスワードが違うよ！');
-}
+$flg = false;
+if (! empty ( $_POST )) {
+	$mail = $_POST ["mail"];
+	$pass = $_POST ["password"];
+	$login = connect2 ();
+	$sql = "SELECT member_id,password,member_name FROM member WHERE mail='$mail'";
+	$result = mysql_query ( $sql );
+	if (! $result) {
+		// print ("SQLの実行に失敗しました<BR>") ;
+		// print (mysql_errno () . ": " . mysql_error () . "<BR>") ;
+		// exit ();
+	}
+	$row = mysql_fetch_array ( $result );
+	if ($pass == $row ['password']) {
+		$_SESSION ['member_id'] = $row ['member_id'];
+		$_SESSION ['member_name'] = $row ['member_name'];
+		header ( 'location: index.php' );
+		exit ();
+	} else {
+		$flg = true;
+		// print ('IDかパスワードが違うよ！');
+	}
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -54,14 +54,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -99,33 +100,33 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-			<h2>ログインします</h2>
-<form action="" method="post">
-<dl>
-<dt>
-メールアドレス	
-</dt>
-<dd>
-<input type="text" name="mail"></input></dd>
-<dt>
-パスワード</dt>
-<dd>
-<input type="password" name="password"></input></dd>
+				<h2>ログインします</h2>
+				<form action="" method="post">
+					<dl>
+						<dt>メールアドレス</dt>
+						<dd>
+							<input type="text" name="mail"></input>
+						</dd>
+						<dt>パスワード</dt>
+						<dd>
+							<input type="password" name="password"></input>
+						</dd>
 				<?php if($flg == true): ?>
     <p>
-					<font color="red">* メールアドレスとパスワードをご確認ください</font>
-				</p>
+							<font color="red">* メールアドレスとパスワードをご確認ください</font>
+						</p>
     <?php endif; ?>
 <input type="submit" value="ログイン">
-</form>
-</div>
+				
+				</form>
+			</div>
 			<!--/main-->
 			<ul id="footermenu">
 				<li><a href="index.php">トップページ</a></li>

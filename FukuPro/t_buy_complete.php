@@ -28,14 +28,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -73,17 +74,17 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-	<div class="base">購入完了しました。</div>
-	<div class="base">
-		<a href="index.php">お買い物に戻る</a>
-	</div>
+				<div class="base">購入完了しました。</div>
+				<div class="base">
+					<a href="index.php">お買い物に戻る</a>
+				</div>
 			</div>
 			<!--/main-->
 			<ul id="footermenu">
@@ -108,4 +109,3 @@ echo '<h1>
 
 </body>
 </html>
-	

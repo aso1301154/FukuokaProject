@@ -1,35 +1,35 @@
 <?php
 session_start ();
-if (isset($_POST['submit'])) {
-$con = mysql_connect ( "localhost", "root", "root" );
-if (! $con) {
-	print ("MySQLへの接続に失敗しました") ;
+if (isset ( $_POST ['submit'] )) {
+	$con = mysql_connect ( "localhost", "root", "root" );
+	if (! $con) {
+		print ("MySQLへの接続に失敗しました") ;
+		exit ();
+	}
+	if (! mysql_select_db ( "tumtum" )) {
+		print ("データベースへの接続に失敗しました") ;
+		exit ();
+	}
+	$member_name = $_SESSION ['join'] ['name'];
+	$password = $_SESSION ['join'] ['password'];
+	$furigana = $_SESSION ['join'] ['furigana'];
+	$mail = $_SESSION ['join'] ['mail'];
+	$address = $_SESSION ['join'] ['address'];
+	$tel = $_SESSION ['join'] ['tel'];
+	$sql = "INSERT INTO member(member_name,password,furigana,mail,address,tel) values ('$member_name','$password','$furigana','$mail','$address','$tel')";
+	$result = mysql_query ( $sql );
+	if (! $result) {
+		print ("SQLの実行に失敗しました<BR>") ;
+		print (mysql_errno () . ": " . mysql_error () . "<BR>") ;
+		exit ();
+	}
+	if ($result) { // 登録完了
+	             // トランザクション終わり
+		mysql_query ( "commit" );
+	}
+	unset ( $_SESSION ['join'] );
+	require_once 'thanks.php';
 	exit ();
-}
-if (! mysql_select_db ( "tumtum" )) {
-	print ("データベースへの接続に失敗しました") ;
-	exit ();
-}
-$member_name = $_SESSION ['join'] ['name'];
-$password = $_SESSION ['join'] ['password'];
-$furigana = $_SESSION ['join'] ['furigana'];
-$mail = $_SESSION ['join'] ['mail'];
-$address = $_SESSION ['join'] ['address'];
-$tel = $_SESSION ['join'] ['tel'];
-$sql = "INSERT INTO member(member_name,password,furigana,mail,address,tel) values ('$member_name','$password','$furigana','$mail','$address','$tel')";
-$result = mysql_query ( $sql );
-if (! $result) {
-	print ("SQLの実行に失敗しました<BR>") ;
-	print (mysql_errno () . ": " . mysql_error () . "<BR>") ;
-	exit ();
-}
-if($result){  //登録完了
-	//トランザクション終わり
-	mysql_query("commit");
-}
-unset ( $_SESSION ['join'] );
-require_once 'thanks.php';
-exit ();
 }
 
 ?>
@@ -63,14 +63,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ';
-		 print($_SESSION['member_name']);
-		echo 'さん！
+	print ($_SESSION ['member_name']) ;
+	echo 'さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -108,42 +109,54 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-			<h2>登録内容確認</h2>
+				<h2>登録内容確認</h2>
 				<form action="" method="post">
 					<dl>
-						<dt><h3>名前</h3></dt>
+						<dt>
+							<h3>名前</h3>
+						</dt>
 						<dd>
     &raquo;&raquo;&nbsp;<?php echo htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES, 'UTF-8'); ?>
   </dd>
 						</dd>
-						<dt><h3>フリガナ</h3></dt>
+						<dt>
+							<h3>フリガナ</h3>
+						</dt>
 						<dd>
     &raquo;&raquo;&nbsp;<?php echo htmlspecialchars($_SESSION['join']['furigana'], ENT_QUOTES, 'UTF-8'); ?>
   </dd>
 						</dd>
-						<dt><h3>メールアドレス</h3></dt>
+						<dt>
+							<h3>メールアドレス</h3>
+						</dt>
 						<dd>
     &raquo;&raquo;&nbsp;<?php echo htmlspecialchars($_SESSION['join']['mail'], ENT_QUOTES, 'UTF-8'); ?>
   </dd>
 						</dd>
-						<dt><h3>住所</h3></dt>
+						<dt>
+							<h3>住所</h3>
+						</dt>
 						<dd>
     &raquo;&raquo;&nbsp;<?php echo htmlspecialchars($_SESSION['join']['address'], ENT_QUOTES, 'UTF-8'); ?>
   </dd>
 						</dd>
-						<dt><h3>電話番号</h3></dt>
+						<dt>
+							<h3>電話番号</h3>
+						</dt>
 						<dd>
     &raquo;&raquo;&nbsp;<?php echo htmlspecialchars($_SESSION['join']['tel'], ENT_QUOTES, 'UTF-8'); ?>
   </dd>
 						</dd>
-						<dt><h3>パスワード</h3></dt>
+						<dt>
+							<h3>パスワード</h3>
+						</dt>
 						<dd>
       &raquo;&raquo;&nbsp;****<?php //echo htmlspecialchars($_SESSION['join']['password'],ENT_QUOTES,'UTF-8'); ?>
     </dd>
@@ -151,6 +164,7 @@ echo '<h1>
 					<div>
 						<a href="t_entry.php?action=rewrite">&laquo;&nbsp;書き直す</a> <input
 							type="submit" name="submit" value="登録する">
+					
 					</div>
 				</form>
 			</div>

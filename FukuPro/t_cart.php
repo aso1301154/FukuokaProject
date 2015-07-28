@@ -28,14 +28,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -73,31 +74,39 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-<h2>カート</h2>
-<table>
-  <tr><th>商品名</th><th>単価</th><th>数量</th><th>小計</th></tr>
+				<h2>カート</h2>
+				<table>
+					<tr>
+						<th>商品名</th>
+						<th>単価</th>
+						<th>数量</th>
+						<th>小計</th>
+					</tr>
   <?php foreach($rows as $r) { ?>
     <tr>
-      <td><?php echo $r['goods_name'] ?></td>
-      <td><?php echo $r['fee'] ?></td>
-      <td><?php echo $r['num'] ?></td>
-      <td><?php echo $r['fee'] * $r['num'] ?> 円</td>
-    </tr>
+						<td><?php echo $r['goods_name'] ?></td>
+						<td><?php echo $r['fee'] ?></td>
+						<td><?php echo $r['num'] ?></td>
+						<td><?php echo $r['fee'] * $r['num'] ?> 円</td>
+					</tr>
   <?php } ?>
-  <tr><td colspan='2'> </td><td><strong>合計</strong></td><td><?php echo $sum ?> 円</td></tr>
-</table>
-<div class="base">
-  <a href="index.php">お買い物に戻る</a>　
-  <a href="cart_empty.php">カートを空にする</a>　
-  <a href="buy.php">購入する</a>
-</div>
+  <tr>
+						<td colspan='2'></td>
+						<td><strong>合計</strong></td>
+						<td><?php echo $sum ?> 円</td>
+					</tr>
+				</table>
+				<div class="base">
+					<a href="index.php">お買い物に戻る</a> <a href="cart_empty.php">カートを空にする</a>
+					<a href="buy.php">購入する</a>
+				</div>
 			</div>
 			<!--/main-->
 			<ul id="footermenu">

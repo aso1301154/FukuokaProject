@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start ();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
@@ -31,14 +31,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -76,7 +77,7 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
@@ -85,27 +86,27 @@ echo '<h1>
 			<div id="main">
 
 <?php
-//     print('セッション変数の一覧を表示します。<br>');
-//     print_r($_SESSION);
-//     print('<br>');
+// print('セッション変数の一覧を表示します。<br>');
+// print_r($_SESSION);
+// print('<br>');
 
-//     print('セッションIDを表示します。<br>');
-//     print($_COOKIE["PHPSESSID"].'<br>');
+// print('セッションIDを表示します。<br>');
+// print($_COOKIE["PHPSESSID"].'<br>');
 
-//     print('<p>ログアウトします</p>');
+// print('<p>ログアウトします</p>');
 
-    $_SESSION = array();
+$_SESSION = array ();
 
-//     if (isset($_COOKIE["PHPSESSID"])) {
-//         setcookie("PHPSESSID", '', time() - 1800, '/');
-//     }
+// if (isset($_COOKIE["PHPSESSID"])) {
+// setcookie("PHPSESSID", '', time() - 1800, '/');
+// }
 
-    session_destroy();
+session_destroy ();
 ?>
 <p>ログアウトしました。</p>
-<p>
-<a href="index.php">トップページへ</a>
-</p>
+				<p>
+					<a href="index.php">トップページへ</a>
+				</p>
 			</div>
 			<!--/main-->
 			<ul id="footermenu">

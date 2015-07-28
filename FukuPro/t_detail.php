@@ -28,14 +28,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -73,7 +74,7 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
@@ -83,7 +84,7 @@ echo '<h1>
 				<h2>商品詳細</h2>
 				<?php foreach ($goods as $g){?>
 				<td><?php echo img_tag($g['goods_id'])?></td>
-					<td><p class="goods">
+				<td><p class="goods">
 								<?php echo $g['goods_name']?>
 							</p>
 					<p>
@@ -93,19 +94,18 @@ echo '<h1>
 								<?php echo $g['fee']?>
 								円
 							</p>
-							
+
 					<form action="cart.php" method="post">
 						<select name="num">
 									<?php
-									for($i = 0; $i <= 9; $i ++) {
-										echo "<option>$i</option>";
-									}
-									?>
+					for($i = 0; $i <= 9; $i ++) {
+						echo "<option>$i</option>";
+					}
+					?>
 								</select> <input type="hidden" name="goods_id"
 							value="<?php echo $g['goods_id'] ?>" /> <input type="submit"
 							name="submit" value="カートへ" />
-					</form>
-					</td>
+					</form></td>
 			<?php }?>
 
 
@@ -134,4 +134,3 @@ echo '<h1>
 
 </body>
 </html>
-			

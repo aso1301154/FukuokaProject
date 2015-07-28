@@ -28,14 +28,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -73,35 +74,41 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-	<h2>購入</h2>
-	<div class="base">
+				<h2>購入</h2>
+				<div class="base">
   <?php if ($error) echo "<span class=\"error\">$error</span>"?>
   <form action="buy.php" method="post">
-			<p>
-				お名前<br> <input type="text" name="name" value="<?php echo $_SESSION['member_name'] ?>" />
-			</p>
-			<p>
-				ご住所<br> <input type="text" name="address" size="60"
-					value="<?php echo $_SESSION['address'] ?>" />
-			</p>
-			<p>
-				電話番号<br> <input type="text" name="tel" value="<?php echo $_SESSION['tel'] ?>" />
-			</p>
-			<p>
-				<input type="submit" name="submit" value="購入">
-			</p>
-		</form>
-	</div>
-	<div class="base">
-		<a href="index.php">お買い物に戻る</a> <a href="cart.php">カートに戻る</a>
-	</div>
+						<p>
+							お名前<br> <input type="text" name="name"
+								value="<?php echo $_SESSION['member_name'] ?>" />
+						
+						</p>
+						<p>
+							ご住所<br> <input type="text" name="address" size="60"
+								value="<?php echo $_SESSION['address'] ?>" />
+						
+						</p>
+						<p>
+							電話番号<br> <input type="text" name="tel"
+								value="<?php echo $_SESSION['tel'] ?>" />
+						
+						</p>
+						<p>
+							<input type="submit" name="submit" value="購入">
+						
+						</p>
+					</form>
+				</div>
+				<div class="base">
+					<a href="index.php">お買い物に戻る</a> <a href="cart.php">カートに戻る</a>
+				</div>
 			</div>
 			<!--/main-->
 			<ul id="footermenu">

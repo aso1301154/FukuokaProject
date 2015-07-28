@@ -10,7 +10,9 @@ if (@$_POST ['submit']) {
 }
 foreach ( $_SESSION ['cart'] as $code => $num ) {
 	$st = $pdo->prepare ( "SELECT * FROM goods WHERE goods_id = :goods_id " );
-	$st->execute ( array ( ':goods_id'=>$code ) );
+	$st->execute ( array (
+			':goods_id' => $code 
+	) );
 	$row = $st->fetch ();
 	$st->closeCursor ();
 	$row ['num'] = strip_tags ( $num );

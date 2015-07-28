@@ -67,14 +67,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ';
-		 print($_SESSION['member_name']);
-		echo 'さん！
+	print ($_SESSION ['member_name']) ;
+	echo 'さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -112,105 +113,118 @@ echo '<h1>
 					onmouseover="MM_swapImage('Image6','','images/menu_over_06.gif',1)"
 					onmouseout="MM_swapImgRestore()" /></a></li>
 		</ul>
-		
+
 
 
 		<div id="contents">
 
 
 			<div id="main">
-			<h2>会員情報登録</h2>
-	<p>必要事項をご記入ください</p>
-	<form action="" method="post" enctype="multipart/form-data">
-		<dl>
-			<dt>
-				名前<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="text" name="name" size="35" maxlength="255"
-					value="<?php echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); ?>">
+				<h2>会員情報登録</h2>
+				<p>必要事項をご記入ください</p>
+				<form action="" method="post" enctype="multipart/form-data">
+					<dl>
+						<dt>
+							名前<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="text" name="name" size="35" maxlength="255"
+								value="<?php echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['name'] == 'blank'): ?>
     <p>
-					<font color="red">* 名前を入力してください</font>
-				</p>
+									<font color="red">* 名前を入力してください</font>
+								</p>
     <?php endif; ?>
-			</dd>
-			<dt>
-				フリガナ<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="text" name="furigana" size="35" maxlength="255"
-					value="<?php echo htmlspecialchars($_POST['furigana'], ENT_QUOTES, 'UTF-8'); ?>">
+			
+						
+						</dd>
+						<dt>
+							フリガナ<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="text" name="furigana" size="35" maxlength="255"
+								value="<?php echo htmlspecialchars($_POST['furigana'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['furigana'] == 'blank'): ?>
     <p>
-					<font color="red">* フリガナを入力してください</font>
-				</p>
+									<font color="red">* フリガナを入力してください</font>
+								</p>
     <?php endif; ?>
-			</dd>
-			<dt>
-				メールアドレス<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="text" name="mail" size="35" maxlength="255"
-					value="<?php echo htmlspecialchars($_POST['mail'], ENT_QUOTES, 'UTF-8'); ?>">
+			
+						
+						</dd>
+						<dt>
+							メールアドレス<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="text" name="mail" size="35" maxlength="255"
+								value="<?php echo htmlspecialchars($_POST['mail'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['mail'] == 'blank'): ?>
     <p>
-					<font color="red">* メールアドレスを入力してください</font>
-				</p>
+									<font color="red">* メールアドレスを入力してください</font>
+								</p>
     <?php endif; ?>
     <?php if($error['mail'] == 'duplicate'): ?>
     <p>
-					<font color="red">* 指定されたメールアドレスは既に登録されています</font>
-				</p><?php endif; ?>
+									<font color="red">* 指定されたメールアドレスは既に登録されています</font>
+								</p><?php endif; ?>
   
-			</dd>
-			<dt>
-				住所<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="text" name="address" size="35" maxlength="255"
-					value="<?php echo htmlspecialchars($_POST['address'], ENT_QUOTES, 'UTF-8'); ?>">
+			
+						
+						</dd>
+						<dt>
+							住所<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="text" name="address" size="35" maxlength="255"
+								value="<?php echo htmlspecialchars($_POST['address'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['address'] == 'blank'): ?>
     <p>
-					<font color="red">* 住所を入力してください</font>
-				</p>
+									<font color="red">* 住所を入力してください</font>
+								</p>
     <?php endif; ?>
-			</dd>
-			<dt>
-				電話番号<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="text" name="tel" size="35" maxlength="255"
-					value="<?php echo htmlspecialchars($_POST['tel'], ENT_QUOTES, 'UTF-8'); ?>">
+			
+						
+						</dd>
+						<dt>
+							電話番号<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="text" name="tel" size="35" maxlength="255"
+								value="<?php echo htmlspecialchars($_POST['tel'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['tel'] == 'blank'): ?>
     <p>
-					<font color="red">* 電話番号を入力してください</font>
-				</p>
+									<font color="red">* 電話番号を入力してください</font>
+								</p>
     <?php endif; ?>
-			</dd>
-			<dt>
-				パスワード<font color="red"> 必須</font>
-			</dt>
-			<dd>
-				<input type="password" name="password" size="10" maxlength="20"
-					value="<?php echo htmlspecialchars($_POST['pass'], ENT_QUOTES, 'UTF-8'); ?>">
+			
+						
+						</dd>
+						<dt>
+							パスワード<font color="red"> 必須</font>
+						</dt>
+						<dd>
+							<input type="password" name="password" size="10" maxlength="20"
+								value="<?php echo htmlspecialchars($_POST['pass'], ENT_QUOTES, 'UTF-8'); ?>">
 				<?php if($error['password'] == 'blank'): ?>
     <p>
-					<font color="red">* パスワードを入力してください</font>
-				</p>
+									<font color="red">* パスワードを入力してください</font>
+								</p>
     <?php endif; ?>
     <?php if($error['password'] == 'length'): ?>
     <p>
-					<font color="red">* パスワードは４文字以上で入力してください</font>
-				</p>
+									<font color="red">* パスワードは４文字以上で入力してください</font>
+								</p>
     <?php endif; ?>
-			</dd>
-		</dl>
-		<div>
-			<input type="submit" value="入力内容を確認">
-		</div>
-	</form>
-</div>
+			
+						
+						</dd>
+					</dl>
+					<div>
+						<input type="submit" value="入力内容を確認">
+					
+					</div>
+				</form>
+			</div>
 			<!--/main-->
 			<ul id="footermenu">
 				<li><a href="index.html">トップページ</a></li>
@@ -234,4 +248,3 @@ echo '<h1>
 
 </body>
 </html>
-	

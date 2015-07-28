@@ -28,14 +28,15 @@ if ($_SESSION ['member_name'] == null) {
 			<a href="l_form.php">ログイン</a>
 		</div>
 	</h1>';
-}else{
-echo '<h1>
+} else {
+	echo '<h1>
 		ようこそ ';
-		 print($_SESSION['member_name']);
-		echo ' さん！
+	print ($_SESSION ['member_name']) ;
+	echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
-}?>
+}
+?>
 
 	<div id="container">
 
@@ -112,14 +113,14 @@ echo '<h1>
 						?>
 					<?php
 						echo img_sub ( $g ['goods_id'] );
-						echo $g['goods_name'];
+						echo $g ['goods_name'];
 						?>
 					
 					<?php
 					}
 					?>
 					</div>
-				
+
 
 
 
