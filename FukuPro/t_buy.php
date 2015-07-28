@@ -30,9 +30,9 @@ if ($_SESSION ['member_name'] == null) {
 	</h1>';
 }else{
 echo '<h1>
-		ようこそ';
+		ようこそ ';
 		 print($_SESSION['member_name']);
-		echo 'さん！
+		echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
 }?>
@@ -80,19 +80,19 @@ echo '<h1>
 
 
 			<div id="main">
-	<h1>購入</h1>
+	<h2>購入</h2>
 	<div class="base">
   <?php if ($error) echo "<span class=\"error\">$error</span>"?>
   <form action="buy.php" method="post">
 			<p>
-				お名前<br> <input type="text" name="name" value="<?php echo $name ?>">
+				お名前<br> <input type="text" name="name" value="<?php echo $_SESSION['member_name'] ?>" />
 			</p>
 			<p>
 				ご住所<br> <input type="text" name="address" size="60"
-					value="<?php echo $address ?>">
+					value="<?php echo $_SESSION['address'] ?>" />
 			</p>
 			<p>
-				電話番号<br> <input type="text" name="tel" value="<?php echo $tel ?>">
+				電話番号<br> <input type="text" name="tel" value="<?php echo $_SESSION['tel'] ?>" />
 			</p>
 			<p>
 				<input type="submit" name="submit" value="購入">

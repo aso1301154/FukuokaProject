@@ -1,3 +1,29 @@
+<?php
+require 'common.php';
+$flg=false;
+if (!empty($_POST)) {
+$mail = $_POST ["mail"];
+$pass = $_POST ["password"];
+$login = connect2();
+$sql = "SELECT member_id,password,member_name FROM member WHERE mail='$mail'";
+$result = mysql_query ( $sql );
+if (! $result) {
+	//print ("SQLの実行に失敗しました<BR>") ;
+	//print (mysql_errno () . ": " . mysql_error () . "<BR>") ;
+	//exit ();
+}
+$row = mysql_fetch_array ( $result );
+if ($pass == $row['password']) {
+	$_SESSION['member_id'] = $row['member_id'];
+	$_SESSION['member_name'] = $row['member_name'];
+	header('location: index.php');
+	exit;
+}else {
+	$flg=true;
+	//print ('IDかパスワードが違うよ！');
+}
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
@@ -30,9 +56,9 @@ if ($_SESSION ['member_name'] == null) {
 	</h1>';
 }else{
 echo '<h1>
-		ようこそ';
+		ようこそ ';
 		 print($_SESSION['member_name']);
-		echo 'さん！
+		echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
 }?>
@@ -81,10 +107,10 @@ echo '<h1>
 
 			<div id="main">
 			<h2>ログインします</h2>
-<form action="login.php" method="post">
+<form action="" method="post">
 <dl>
 <dt>
-メールアドレス
+メールアドレス	
 </dt>
 <dd>
 <input type="text" name="mail"></input></dd>
@@ -92,6 +118,11 @@ echo '<h1>
 パスワード</dt>
 <dd>
 <input type="password" name="password"></input></dd>
+				<?php if($flg == true): ?>
+    <p>
+					<font color="red">* メールアドレスとパスワードをご確認ください</font>
+				</p>
+    <?php endif; ?>
 <input type="submit" value="ログイン">
 </form>
 </div>

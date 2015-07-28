@@ -30,9 +30,9 @@ if ($_SESSION ['member_name'] == null) {
 	</h1>';
 }else{
 echo '<h1>
-		ようこそ';
+		ようこそ ';
 		 print($_SESSION['member_name']);
-		echo 'さん！
+		echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
 }?>
@@ -80,7 +80,7 @@ echo '<h1>
 
 
 			<div id="main">
-<h1>カート</h1>
+<h2>カート</h2>
 <table>
   <tr><th>商品名</th><th>単価</th><th>数量</th><th>小計</th></tr>
   <?php foreach($rows as $r) { ?>

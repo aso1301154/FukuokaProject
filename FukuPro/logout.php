@@ -33,9 +33,9 @@ if ($_SESSION ['member_name'] == null) {
 	</h1>';
 }else{
 echo '<h1>
-		ようこそ';
+		ようこそ ';
 		 print($_SESSION['member_name']);
-		echo 'さん！
+		echo ' さん！
 		<a href="logout.php">ログアウト</a>
 	</h1>';
 }?>
